@@ -1,19 +1,30 @@
-
 import turtle
 
 def draw_square(t, side):
-    # Write your code here
-    pass
+    for i in range(4):
+        t.forward(side)
+        t.left(90)
 
 
 def draw_triangle(t, side):
-    # Write your code here
-    pass
+    for i in range(3):
+        t.forward(side)
+        t.left(120)
 
 
 def draw_house(t):
-    # Write your code here
-    pass
+    side = 150
+    
+    # Draw the square base
+    draw_square(t, side)
+    
+    # Move turtle to top of square
+    t.left(90)
+    t.forward(side)
+    t.right(90)
+    
+    # Draw the roof
+    draw_triangle(t, side)
 
 
 if __name__ == "__main__":
@@ -23,3 +34,4 @@ if __name__ == "__main__":
     draw_house(t)
 
     turtle.done()
+
